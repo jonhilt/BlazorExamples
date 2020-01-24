@@ -16,6 +16,15 @@
         <e p="WeatherForecast.cs" t="Include" />
         <e p="WeatherForecastService.cs" t="Include" />
       </e>
+      <e p="Domain" t="Include">
+        <e p="TrafficLight" t="Include">
+          <e p="GetReadyToGoState.cs" t="Include" />
+          <e p="GetReadyToStopState.cs" t="Include" />
+          <e p="GoState.cs" t="Include" />
+          <e p="ITrafficLightState.cs" t="Include" />
+          <e p="StopState.cs" t="Include" />
+        </e>
+      </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
@@ -33,6 +42,8 @@
         <e p="Index.razor" t="Include" />
         <e p="TrafficLight.razor" t="Include" />
         <e p="TrafficLight.razor.cs" t="Include" />
+        <e p="TrafficLightPM.razor" t="Include" />
+        <e p="TrafficLightPM.razor.cs" t="Include" />
       </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
