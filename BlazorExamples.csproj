@@ -6,4 +6,8 @@
         <RootNamespace>BlazorExamples</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Pages\MarkdownEditor" />
+    </ItemGroup>
+
 </Project>

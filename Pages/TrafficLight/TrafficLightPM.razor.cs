@@ -2,7 +2,7 @@ using System;
 using BlazorExamples.Domain.TrafficLight;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorExamples.Pages
+namespace BlazorExamples.Pages.TrafficLight
 {
     public class TrafficLightBasePM : ComponentBase
     {
@@ -12,7 +12,7 @@ namespace BlazorExamples.Pages
         {
             Lights = Lights switch
             {
-                StopState s when s.AmberOn=>  new GetReadyToGoState(),
+                StopState _ =>  new GetReadyToGoState(),
                 GetReadyToGoState _ => new GoState(),
                 GoState _ => new GetReadyToStopState(),
                 GetReadyToStopState _ => new StopState(),

@@ -40,15 +40,19 @@
         <e p="Error.razor" t="Include" />
         <e p="FetchData.razor" t="Include" />
         <e p="Index.razor" t="Include" />
-        <e p="TrafficLight.razor" t="Include" />
-        <e p="TrafficLight.razor.cs" t="Include" />
-        <e p="TrafficLightPM.razor" t="Include" />
-        <e p="TrafficLightPM.razor.cs" t="Include" />
+        <e p="MarkdownEditor" t="Include" />
+        <e p="TrafficLight" t="Include">
+          <e p="TrafficLight.razor" t="Include" />
+          <e p="TrafficLight.razor.cs" t="Include" />
+          <e p="TrafficLightPM.razor" t="Include" />
+          <e p="TrafficLightPM.razor.cs" t="Include" />
+        </e>
       </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="launchSettings.json" t="Include" />
       </e>
+      <e p="README.md" t="Include" />
       <e p="Shared" t="Include">
         <e p="MainLayout.razor" t="Include" />
         <e p="NavMenu.razor" t="Include" />
