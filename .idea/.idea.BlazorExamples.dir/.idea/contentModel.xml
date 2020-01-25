@@ -40,7 +40,10 @@
         <e p="Error.razor" t="Include" />
         <e p="FetchData.razor" t="Include" />
         <e p="Index.razor" t="Include" />
-        <e p="MarkdownEditor" t="Include" />
+        <e p="MarkdownEditor" t="Include">
+          <e p="Editor.razor" t="Include" />
+          <e p="Editor.razor.cs" t="Include" />
+        </e>
         <e p="TrafficLight" t="Include">
           <e p="TrafficLight.razor" t="Include" />
           <e p="TrafficLight.razor.cs" t="Include" />

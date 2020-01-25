@@ -1,0 +1,11 @@
+@page "/markdown"
+@inherits MarkdownEditorBase
+
+<div class="row">
+    <div class="col-6">
+        <textarea class="form-control" @bind-value="Body" @bind-value:event="oninput"></textarea>
+    </div>
+    <div class="col-6">
+        @((MarkupString) Preview)
+    </div>
+</div>
