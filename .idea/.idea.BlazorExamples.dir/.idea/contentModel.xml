@@ -57,6 +57,7 @@
       </e>
       <e p="README.md" t="Include" />
       <e p="Shared" t="Include">
+        <e p="Banner.razor" t="Include" />
         <e p="MainLayout.razor" t="Include" />
         <e p="NavMenu.razor" t="Include" />
       </e>

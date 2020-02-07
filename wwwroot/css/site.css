@@ -53,6 +53,19 @@ div.green.on {
     background-color:  green;
 }
 
+.banner {
+    padding: 1em;
+    text-align: center;
+    vertical-align: center;
+    background-color: orangered;
+    color: white;
+    font-size: 1.2em;
+}
+
+.banner .btn {
+    color: white;
+}
+
 .main {
     flex: 1;
 }
