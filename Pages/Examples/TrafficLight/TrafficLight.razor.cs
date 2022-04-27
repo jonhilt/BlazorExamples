@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorExamples.Pages.TrafficLight
+namespace BlazorExamples.Pages.Examples.TrafficLight
 {
     public enum State
     {

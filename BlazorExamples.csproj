@@ -11,4 +11,22 @@
       <PackageReference Include="Markdig" Version="0.30.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Examples\Counter.razor" />
+      <_ContentIncludedByDefault Remove="Examples\Error.razor" />
+      <_ContentIncludedByDefault Remove="Examples\FetchData.razor" />
+      <_ContentIncludedByDefault Remove="Examples\MarkdownEditor\Editor.razor" />
+      <_ContentIncludedByDefault Remove="Examples\TrafficLight\TrafficLight.razor" />
+      <_ContentIncludedByDefault Remove="Examples\TrafficLight\TrafficLightPM.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Pages\Examples\Counter.razor" />
+      <AdditionalFiles Include="Pages\Examples\Error.razor" />
+      <AdditionalFiles Include="Pages\Examples\FetchData.razor" />
+      <AdditionalFiles Include="Pages\Examples\MarkdownEditor\Editor.razor" />
+      <AdditionalFiles Include="Pages\Examples\TrafficLight\TrafficLight.razor" />
+      <AdditionalFiles Include="Pages\Examples\TrafficLight\TrafficLightPM.razor" />
+    </ItemGroup>
+
 </Project>

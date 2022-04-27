@@ -1,8 +1,7 @@
-using System;
 using Markdig;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorExamples.Pages.MarkdownEditor
+namespace BlazorExamples.Pages.Examples.MarkdownEditor
 {
     public class MarkdownEditorBase : ComponentBase
     {

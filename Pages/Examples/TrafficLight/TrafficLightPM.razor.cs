@@ -2,7 +2,7 @@ using System;
 using BlazorExamples.Domain.TrafficLight;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorExamples.Pages.TrafficLight
+namespace BlazorExamples.Pages.Examples.TrafficLight
 {
     public class TrafficLightBasePM : ComponentBase
     {
