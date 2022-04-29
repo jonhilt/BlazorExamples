@@ -1,0 +1,59 @@
+@page "/state"
+@inject MovieDatabase MovieDatabase
+@inject NavigationManager NavigationManager
+
+<h2>Select your favourites from the following films</h2>
+
+<ul>
+    @foreach (var film in possibleFilms)
+    {
+        <li>
+            <input type="checkbox" @onchange="e => FilmSelected(film, e)"/> @film.Title
+        </li>
+    }
+</ul>
+
+<button onclick="@CompareFilms">Compare</button>
+
+@code {
+
+    private readonly List<Movie> selectedFilms = new();
+
+    private List<Movie> possibleFilms;
+
+    protected override Task OnInitializedAsync()
+    {
+        possibleFilms = MovieDatabase.GetMovies().ToList();
+        return base.OnInitializedAsync();   
+    }
+
+    private void FilmSelected(Movie film, ChangeEventArgs changeEventArgs)
+    {
+        if (changeEventArgs.Value != null && (bool)changeEventArgs.Value)
+        {
+            selectedFilms.Add(film);
+        }
+        else
+        {
+            selectedFilms.Remove(film);
+        }
+    }
+
+    private async Task CompareFilms()
+    {
+        if (selectedFilms?.Any() ?? false)
+        {
+            var readOnlyDictionary = new Dictionary<string, object>
+            {
+                ["film"] = "1",
+                ["film"] = "2",
+            };
+
+            var uri = NavigationManager.GetUriWithQueryParameters(readOnlyDictionary);
+            
+            var queryString = string.Join("&", selectedFilms.Select(x=>"film=" + x.Id));
+            NavigationManager.NavigateTo("/MovieComparer?" + queryString);
+        }
+    }
+
+}

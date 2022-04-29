@@ -1,0 +1,29 @@
+@page "/MovieComparer"
+@inject MovieDatabase MovieDatabase
+
+<h3>MovieComparer</h3>
+
+<ul>
+    @foreach (var movie in movieDetails)
+    {
+        <li>
+            @movie.Title
+            <p>@movie.Plot</p>
+        </li>
+    }
+</ul>
+
+@code {
+
+    [Parameter]
+    [SupplyParameterFromQuery(Name = "film")]
+    public int[] Films { get; set; }
+
+    private IEnumerable<Movie> movieDetails;
+
+    protected override Task OnInitializedAsync()
+    {
+        movieDetails = MovieDatabase.GetMovies(Films);
+        return Task.CompletedTask;
+    }
+}

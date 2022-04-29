@@ -1,5 +1,6 @@
 using Blazored.LocalStorage;
 using BlazorExamples.Data;
+using BlazorExamples.Pages.Examples.StateViaUrl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,7 @@ namespace BlazorExamples
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddBlazoredLocalStorage();
+            services.AddSingleton<MovieDatabase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
