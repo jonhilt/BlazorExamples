@@ -1,0 +1,35 @@
+@page "/ProgressBar"
+@inject ProgressService ProgressService
+@implements IDisposable
+
+<button onclick="@Start">Start</button>
+
+Progress: @progress;
+
+@code {
+    private double progress = 0.0;
+
+    protected override Task OnInitializedAsync()
+    {
+        ProgressService.ProgressBarUpdated += ProgressBarUpdated;
+        return Task.CompletedTask;
+    }
+
+    async Task Start()
+    {
+        await ProgressService.Start();
+    }
+
+    private void ProgressBarUpdated(object sender, double e)
+    {
+        progress = e;
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        if(ProgressService != null)
+            ProgressService.ProgressBarUpdated -= ProgressBarUpdated;
+    }
+
+}

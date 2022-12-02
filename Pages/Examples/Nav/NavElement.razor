@@ -1,0 +1,23 @@
+<h3>@Item?.Title</h3>
+
+@if (Expanded)
+{
+    <ul>
+        @foreach (var item in Item.Items)
+        {
+            <li>
+                <a href="@item.Link">@item.Name</a>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+
+    [Parameter]
+    public NavSubMenu Item { get; set; }
+
+    [Parameter]
+    public bool Expanded { get; set; }
+
+}

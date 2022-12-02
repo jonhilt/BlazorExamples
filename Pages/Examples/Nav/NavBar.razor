@@ -1,0 +1,47 @@
+@using System.ComponentModel.Design
+<h3>NavBar</h3>
+
+@if (subMenus != null)
+{
+    <ul>
+        @foreach (var subMenu in subMenus)
+        {
+            <li @onclick="() => Select(subMenu)" class="border px-4 rounded-md">
+                <NavElement Item="subMenu" Expanded="isSelectedMenu(subMenu)"/>
+            </li>
+        }
+    </ul>  
+}
+
+@code {
+
+    List<NavSubMenu> subMenus;
+    NavSubMenu selectedSubMenu;
+
+    // is the passed in menu the currently selected menu?
+    bool isSelectedMenu(NavSubMenu subMenu) => subMenu == selectedSubMenu; 
+    
+    protected override void OnInitialized()
+    {
+        // using a little bit of local state here to drive the UI
+        // also useful for keeping track of which menu is selected
+        
+        var subMenuA = new NavSubMenu("General");
+        subMenuA.AddItem(new NavItem("Home", "/"));
+        subMenuA.AddItem(new NavItem("About", "/about"));
+
+        var subMenuB = new NavSubMenu("Admin");
+        subMenuB.AddItem(new NavItem("Manage", "/admin/manage"));
+        subMenuB.AddItem(new NavItem("Backup", "/admin/backup"));
+
+        subMenus = new List<NavSubMenu> { subMenuA, subMenuB };
+
+        base.OnInitialized();
+    }
+
+    private void Select(NavSubMenu subMenu)
+    {
+        selectedSubMenu = subMenu;
+    }
+
+}
