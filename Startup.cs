@@ -1,6 +1,5 @@
 using Blazored.LocalStorage;
 using BlazorExamples.Data;
-using BlazorExamples.Pages.Examples.ProgressBar;
 using BlazorExamples.Pages.Examples.StateViaUrl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,7 +27,6 @@ namespace BlazorExamples
             services.AddSingleton<WeatherForecastService>();
             services.AddBlazoredLocalStorage();
             services.AddSingleton<MovieDatabase>();
-            services.AddScoped<ProgressService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

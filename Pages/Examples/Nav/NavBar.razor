@@ -6,7 +6,7 @@
     <ul>
         @foreach (var subMenu in subMenus)
         {
-            <li @onclick="() => Select(subMenu)" class="border px-4 rounded-md">
+            <li @onclick="() => Select(subMenu)" class="border px-4 rounded-md" style="cursor: pointer">
                 <NavElement Item="subMenu" Expanded="isSelectedMenu(subMenu)"/>
             </li>
         }

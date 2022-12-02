@@ -18,6 +18,7 @@
       <_ContentIncludedByDefault Remove="Examples\MarkdownEditor\Editor.razor" />
       <_ContentIncludedByDefault Remove="Examples\TrafficLight\TrafficLight.razor" />
       <_ContentIncludedByDefault Remove="Examples\TrafficLight\TrafficLightPM.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Examples\ProgressBar\Index.razor" />
     </ItemGroup>
 
     <ItemGroup>
